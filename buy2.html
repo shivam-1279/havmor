@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rajwadi Kulfi Falooda|Havmore</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            .footer-section {
+                background-color:#de2138;
+                color: white;
+                padding: 2rem 0;
+            }
+            .footer-links {
+                color: black;
+                font-size: 1rem;
+            }
+            h5{
+                color: white;
+            }
+            body {
+                background-color: #fffcef;
+                position: relative;
+                min-height: 100vh;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .header-container {
+                position: relative;
+                width: 100%;
+            }
+            
+            .header-img {
+                width: 100%;
+                height: auto;
+            }
+            
+            .logo-img {
+                height: 150px; /* Reduced size */
+                max-width: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            
+            .menu-icon, .search-icon, .map-icon, .sticky-icon {
+                height: 40px;
+                max-width: 100%;
+            }
+            
+            .nav-icons {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .menu-icon-container {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+            }
+            
+            .me-time-container {
+                position: absolute;
+                left: 60%;
+                top: 50px;
+                transform: translateX(-50%);
+            }
+            
+            .me-time-text {
+                color: white;
+                font-size: 3rem;
+                font-family: sans-serif;
+                line-height: 1;
+            }
+            
+            .breadcrumb-container {
+                position: absolute;
+                left: 60px;
+                bottom: 20px;
+                display: flex;
+                align-items: center;
+            }
+            
+            .back-arrow {
+                font-size: 1.5rem;
+                color: white;
+                margin-right: 10px;
+            }
+            
+            .breadcrumb {
+                font-size: 0.9rem;
+                color: white;
+                margin: 0;
+            }
+            
+            .product-title {
+                color: red;
+                font-size: 2rem;
+            }
+            
+            .product-description {
+                font-size: 1.2rem;
+            }
+            
+            .buy-now-btn {
+                font-size: 1.2rem;
+                color: red;
+                border: 1px solid;
+                border-radius: 20px;
+                padding: 8px 30px;
+                display: inline-block;
+                margin-top: 20px;
+                text-decoration: none;
+            }
+            
+            .ingredients-section {
+                background-color: rgb(83, 36, 3);
+                height: 80px;
+                width: 100%;
+                position: relative;
+                margin: 20px 0;
+            }
+            
+            .ingredients-btn, .nutrition-btn {
+                color: white;
+                font-size: 1.2rem;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 2;
+                text-decoration: none;
+            }
+            
+            .ingredients-btn {
+                left: 30%;
+            }
+            
+            .nutrition-btn {
+                left: 50%;
+            }
+            
+            .active-btn {
+                background-color: rgb(232, 75, 75);
+                height: 100%;
+                width: 20%;
+                position: absolute;
+                top: 0;
+                left: 30%;
+                z-index: 1;
+            }
+            
+            .recommended-title {
+                color: red;
+                font-size: 1.5rem;
+                text-align: center;
+                margin: 20px 0;
+            }
+            
+            .product-card {
+                margin-bottom: 20px;
+                position: relative;
+            }
+            
+            .product-img {
+                width: 100%;
+                height: auto;
+                max-height: 250px;
+                object-fit: cover;
+            }
+            
+            .product-name {
+                font-size: 1rem;
+                margin-top: 10px;
+            }
+            
+            .product-buy-btn {
+                font-size: 1.2rem;
+                color: white;
+                background-color: red;
+                border: 1px solid;
+                border-radius: 20px;
+                padding: 8px 20px;
+                display: inline-block;
+                margin-top: 10px;
+                text-decoration: none;
+            }
+            
+            @media (max-width: 1200px) {
+                .me-time-text {
+                    font-size: 2.5rem;
+                }
+            }
+            
+            @media (max-width: 992px) {
+                .me-time-text {
+                    font-size: 2rem;
+                }
+                
+                .logo-img {
+                    height: 120px;
+                }
+                
+                .product-title {
+                    font-size: 1.5rem;
+                }
+                
+                .product-description {
+                    font-size: 1rem;
+                }
+                
+                .footer-title {
+                    font-size: 1rem;
+                }
+                
+                .footer-links {
+                    font-size: 0.9rem;
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .me-time-text {
+                    font-size: 1.5rem;
+                }
+                
+                .logo-img {
+                    height: 100px;
+                }
+                
+                .ingredients-btn, .nutrition-btn {
+                    font-size: 1rem;
+                }
+                
+                .active-btn {
+                    width: 30%;
+                }
+                
+                .product-buy-btn {
+                    font-size: 1rem;
+                    padding: 5px 15px;
+                }
+                
+                .me-time-container {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            
+            @media (max-width: 576px) {
+                .me-time-text {
+                    font-size: 1.2rem;
+                }
+                
+                .logo-img {
+                    height: 80px;
+                }
+                
+                .ingredients-section {
+                    height: 60px;
+                }
+                
+                .ingredients-btn, .nutrition-btn {
+                    font-size: 0.8rem;
+                }
+                
+                .active-btn {
+                    width: 40%;
+                }
+                
+                .product-title {
+                    font-size: 1.2rem;
+                }
+                
+                .product-description {
+                    font-size: 0.9rem;
+                }
+                
+                .footer-title {
+                    font-size: 0.9rem;
+                }
+                
+                .footer-links {
+                    font-size: 0.8rem;
+                }
+                
+                .footer-contact {
+                    font-size: 1rem;
+                }
+                
+                .breadcrumb {
+                    font-size: 0.7rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header-container">
+            <img src="BY1.webp" class="header-img" alt="Header Image">
+            
+            <img src="logo.png" class="logo-img" alt="Logo">
+            
+            <div class="nav-icons">
+                <img src="search-icon.svg" class="search-icon me-2" alt="Search">
+                <img src="map-icon.svg" class="map-icon me-2" alt="Map">
+                <img src="sticky-icon3.svg" class="sticky-icon" alt="Sticky">
+            </div>
+            
+            <div class="menu-icon-container">
+                <img src="menu-icon.png" class="menu-icon" alt="Menu">
+            </div>
+            
+            <div class="me-time-container">
+                <div class="me-time-text">Me</div>
+                <div class="me-time-text">time</div>
+            </div>
+            
+            <div class="breadcrumb-container">
+                <span class="back-arrow">←</span>
+                <span class="breadcrumb">Home-Chocolate-Rajwadi Kulfi Falooda</span>
+            </div>
+        </div>
+
+        <section class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="ice4.jpg" class="img-fluid" alt="Rajwadi Kulfi Falooda">
+                </div>
+                <div class="col-md-6">
+                    <h1 class="product-title">Rajwadi Kulfi Falooda</h1>
+                    <p class="product-description mt-3">
+                        Experience the luxurious flavor of Rajwadi Kulfi Falooda. A creamy blend of kulfi and falooda, infused with the richness of almonds, cashews, pistachios and the true flavour of saffron.
+                    </p>
+                    <a href="#" class="buy-now-btn">BUY NOW</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid mt-5 position-relative">
+            <div class="ingredients-section">
+                <div class="active-btn"></div>
+                <a href="#" class="ingredients-btn">INGREDIENTS</a>
+                <a href="#" class="nutrition-btn">NUTRITIONAL INFORMATION</a>
+            </div>
+        </section>
+
+        <section class="container my-5">
+            <h2 class="recommended-title">You May Also Like</h2>
+            
+            <div class="row mt-5">
+                <div class="col-md-3 col-6 product-card">
+                    <img src="ice24.webp" class="product-img" alt="Choco Pops">
+                    <div class="product-name">Choco Pops</div>
+                    <a href="#" class="product-buy-btn">BUY NOW</a>
+                </div>
+                <div class="col-md-3 col-6 product-card">
+                    <img src="ice25.webp" class="product-img" alt="Mango Magic">
+                    <div class="product-name">Mango Magic</div>
+                    <a href="#" class="product-buy-btn">BUY NOW</a>
+                </div>
+                <div class="col-md-3 col-6 product-card">
+                    <img src="ice26.webp" class="product-img" alt="Mango Sundae">
+                    <div class="product-name">Mango Sundae</div>
+                    <a href="#" class="product-buy-btn">BUY NOW</a>
+                </div>
+                <div class="col-md-3 col-6 product-card">
+                    <img src="ice27.jpg" class="product-img" alt="Oreo Overload">
+                    <div class="product-name">Oreo Overload</div>
+                    <a href="#" class="product-buy-btn mt-3 ">BUY NOW</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer-section">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-2 footer-links">
+                        <h5>CHOOSE YOUR PALETTE</h5>
+                        <p>Chocolate<br>Dry Fruits<br>Indian Traditional<br>Fruits<br>International</p>
+                    </div>
+                    <div class="col-md-2 footer-links">
+                        <h5>KNOW US BETTER</h5>
+                        <p>About Havmor<br>Awards<br>CSR<br>Career<br>Privacy Policy<br>FAQ<br>Terms of Use<br>Annual Return<br>Code of Conduct<br>News Updates</p>
+                    </div>
+                    <div class="col-md-2 footer-links">
+                        <h5>SURPRISE ME</h5>
+                        <p>Party Time<br>Contests<br>Meet Our Showrunners<br>We're Close By</p>
+                    </div>
+                    <div class="col-md-2 footer-links">
+                        <h5>REACH OUT TO US</h5>
+                        <p>Become Franchiser<br></p>
+                    </div>
+                    <div class="col-md-3 footer-links">
+                        <p>
+                            <h5>Lotte India Corporation Limited </h5><br>
+                            2nd Floor, Commerce House – 4,<br>
+                            B/S Shell Petrol Pump, 100 Ft. Road, Prahlad nagar<br>
+                            Anandnagar road, Ahmedabad-380015,<br>
+                            Corporate office : 079 4020 9000<br><br>
+                            <h5>privacy Policy</h5><br>
+                            ITGrievance@havmor.com<br>
+                           <h5>Customer Care</h5> <br>
+                            022 6987 1275<br>
+                            havmor@havmor.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
